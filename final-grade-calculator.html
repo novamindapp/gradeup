@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Final Grade Calculator — What Do I Need on My Final to Get an A?</title>
+<meta name="description" content="What do I need on my final to get an A? Enter your current grade, your final exam weight, and your target grade to find the exact final exam score you need — plus a what-if table for every letter grade.">
+<link rel="canonical" href="https://novamindapp.github.io/gradeup/final-grade-calculator.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="logo" href="index.html">Grade<span>Up</span></a>
+<nav><a href="index.html">Tools</a><a href="about.html">About</a></nav>
+</header>
+
+<h1>Final Grade Calculator</h1>
+<p>What do I need on my final to get an A? Enter your current grade, how much the final exam is worth, and the grade you want — GradeUp tells you the exact score you need on the final.</p>
+
+<!-- PASTE ADSTERRA CODE HERE -->
+
+<div class="card">
+<label for="current-grade">Current grade (%)</label>
+<input type="number" id="current-grade" min="0" max="100" step="0.1" value="88" placeholder="e.g. 88">
+<label for="final-weight">Final exam weight (%)</label>
+<input type="number" id="final-weight" min="1" max="100" step="1" value="30" placeholder="e.g. 30">
+<label for="target-grade">Target grade (%)</label>
+<input type="number" id="target-grade" min="0" max="100" step="1" value="90" placeholder="e.g. 90 for an A">
+<button type="button" id="calc-final">Calculate</button>
+<p class="result" id="final-result"></p>
+</div>
+
+<div class="card">
+<h2>What-if table: what final score gives each letter grade?</h2>
+<table>
+<thead><tr><th>Letter grade</th><th>Final exam score needed</th></tr></thead>
+<tbody id="whatif-body"></tbody>
+</table>
+<p class="muted">If the needed score is over 100%, that letter grade is out of reach from your current grade — aim one step down, or raise your current grade before the final.</p>
+</div>
+
+<div class="card">
+<h2>How the formula works</h2>
+<p>Your final grade is a weighted average: your current grade counts for everything except the final, and the final counts for its weight. Working backwards:</p>
+<p class="formula">Required final score = (Target grade − Current grade × (1 − Final weight)) ÷ Final weight</p>
+<h3>Worked example</h3>
+<p>Your current grade is 88%, the final is worth 30%, and you want an A (90%). Required score = (90 − 88 × 0.70) ÷ 0.30 = (90 − 61.6) ÷ 0.30 = 28.4 ÷ 0.30 = <strong>94.7%</strong>. So you need a 94.7% on the final to finish with a 90%.</p>
+<p class="muted">Tip: if your teacher drops the lowest test or offers extra credit, your "current grade" for this calculator should be the grade after those adjustments.</p>
+</div>
+
+<a class="back" href="index.html">← All grade tools</a>
+<footer>
+<a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><br>
+© 2026 GradeUp
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

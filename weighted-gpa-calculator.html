@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weighted GPA Calculator — AP, Honors &amp; Regular Courses</title>
+<meta name="description" content="Weighted GPA calculator for AP, Honors, and Regular courses. Add your classes with letter grades and credits — Honors adds +0.5 and AP / IB adds +1.0 — and get your weighted GPA instantly.">
+<link rel="canonical" href="https://novamindapp.github.io/gradeup/weighted-gpa-calculator.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="logo" href="index.html">Grade<span>Up</span></a>
+<nav><a href="index.html">Tools</a><a href="about.html">About</a></nav>
+</header>
+
+<h1>Weighted GPA Calculator</h1>
+<p>Calculate your weighted GPA with Honors and AP classes. Add each course, pick its letter grade and credit count, and set its level — Regular, Honors (+0.5), or AP / IB (+1.0).</p>
+
+<!-- PASTE ADSTERRA CODE HERE -->
+
+<div class="card">
+<table>
+<thead><tr><th>Course</th><th>Grade</th><th>Level</th><th>Credits</th><th></th></tr></thead>
+<tbody id="gpa-rows"></tbody>
+</table>
+<button type="button" id="add-course" class="secondary">+ Add course</button>
+<p class="result" id="weighted-result"></p>
+<p class="muted">Courses with 0 or blank credits are ignored. Grade points use the standard 4.0 scale: A = 4.0, A− = 3.7, B+ = 3.3, B = 3.0, B− = 2.7, C+ = 2.3, C = 2.0, C− = 1.7, D+ = 1.3, D = 1.0, F = 0.0.</p>
+</div>
+
+<div class="card">
+<h2>How weighted GPA works</h2>
+<p>Each course contributes grade points × credits. A harder class is worth more: Honors adds 0.5 and AP / IB adds 1.0 to the grade points before multiplying by credits. Then divide total points by total credits.</p>
+<p class="formula">Weighted GPA = (Sum of grade points × credits, with level bonus) ÷ (Total credits)</p>
+<h3>Worked example</h3>
+<p>Math, AP, A (4.0 + 1.0 = 5.0), 4 credits → 20.0 points. English, Honors, B+ (3.3 + 0.5 = 3.8), 3 credits → 11.4 points. History, Regular, A− (3.7), 3 credits → 11.1 points. Total: 42.5 points ÷ 10 credits = <strong>4.25 weighted GPA</strong>.</p>
+<p class="muted">Note: some schools cap weighted GPA at 5.0 or use a different bump. This calculator shows the uncapped value — check your school's scale for official numbers.</p>
+</div>
+
+<a class="back" href="index.html">← All grade tools</a>
+<footer>
+<a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><br>
+© 2026 GradeUp
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GPA Goal Solver — What GPA Do I Need Next Semester?</title>
+<meta name="description" content="What GPA do I need next semester? Enter your current GPA, completed credits, target GPA, and planned credits to find the exact semester GPA you need — and whether the goal is reachable.">
+<link rel="canonical" href="https://novamindapp.github.io/gradeup/gpa-goal-solver.html">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="wrap">
+<header class="top">
+<a class="logo" href="index.html">Grade<span>Up</span></a>
+<nav><a href="index.html">Tools</a><a href="about.html">About</a></nav>
+</header>
+
+<h1>GPA Goal Solver</h1>
+<p>What GPA do I need next semester to reach my target? Enter your current GPA, your completed credits, the GPA you want, and how many credits you plan to take — GradeUp tells you the exact semester GPA you need.</p>
+
+<!-- PASTE ADSTERRA CODE HERE -->
+
+<div class="card">
+<label for="goal-cur-gpa">Current GPA (4.0 scale)</label>
+<input type="number" id="goal-cur-gpa" min="0" max="4" step="0.01" value="3.1" placeholder="e.g. 3.1">
+<label for="goal-cur-credits">Completed credits</label>
+<input type="number" id="goal-cur-credits" min="0" step="1" value="30" placeholder="e.g. 30">
+<label for="goal-target">Target GPA</label>
+<input type="number" id="goal-target" min="0" max="4" step="0.01" value="3.5" placeholder="e.g. 3.5">
+<label for="goal-planned">Planned credits next semester</label>
+<input type="number" id="goal-planned" min="0" step="1" value="15" placeholder="e.g. 15">
+<button type="button" id="calc-goal">Calculate</button>
+<p class="result" id="goal-result"></p>
+<p class="muted">If the needed GPA is above 4.0, the goal is not reachable next semester — the calculator also shows the highest GPA straight As would give you.</p>
+</div>
+
+<div class="card">
+<h2>How the goal solver works</h2>
+<p>It works out how many total grade points your target requires, subtracts the points you already have, and divides what is left by your planned credits.</p>
+<p class="formula">Needed GPA = (Target GPA × (Completed credits + Planned credits) − Current GPA × Completed credits) ÷ Planned credits</p>
+<h3>Worked example</h3>
+<p>Current GPA 3.1 with 30 credits, target 3.5, planned 15 credits: (3.5 × 45 − 3.1 × 30) ÷ 15 = (157.5 − 93) ÷ 15 = 64.5 ÷ 15 = <strong>4.3</strong> — above a 4.0, so this target is not reachable next semester. With straight As the highest reachable GPA is (3.1 × 30 + 4.0 × 15) ÷ 45 = 153 ÷ 45 = <strong>3.40</strong>. A realistic target would be 3.4 or lower, or the same 3.5 spread over two semesters.</p>
+</div>
+
+<a class="back" href="index.html">← All grade tools</a>
+<footer>
+<a href="about.html">About</a><a href="privacy-policy.html">Privacy Policy</a><a href="terms.html">Terms</a><a href="contact.html">Contact</a><br>
+© 2026 GradeUp
+</footer>
+</div>
+<script src="app.js"></script>
+</body>
+</html>

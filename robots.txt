@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://novamindapp.github.io/gradeup/sitemap.xml
